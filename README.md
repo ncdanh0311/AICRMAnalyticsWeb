@@ -1,19 +1,19 @@
-# 📊 AI CRM Analytics System
+#  AI CRM Analytics System
 
-## 📋 Giới thiệu
+## Giới thiệu
 
 **AI CRM Analytics System** là một hệ thống quản lý quan hệ khách hàng (CRM) thế hệ mới, tích hợp trí tuệ nhân tạo (AI) để phân tích dữ liệu chuyên sâu. Hệ thống không chỉ giúp quản lý thông tin khách hàng và dịch vụ mà còn cung cấp các dự báo thông minh, giúp doanh nghiệp thấu hiểu hành vi khách hàng và tối ưu hóa chiến lược kinh doanh.
 
-### ✨ Tính năng chính
+###  Tính năng chính
 
-- 👤 **Quản lý khách hàng tập trung**: Theo dõi hồ sơ, lịch sử giao dịch và hành vi của từng khách hàng.
-- 🤖 **AI - Phân nhóm khách hàng (Segmentation)**: Tự động phân loại khách hàng (VIP, Loyal, At Risk, Hibernating) bằng thuật toán **K-Means clustering** (scikit-learn).
-- 📉 **AI - Dự báo doanh thu (Forecasting)**: Sử dụng mô hình **Linear Regression** để dự đoán xu hướng doanh thu trong tương lai dựa trên dữ liệu lịch sử.
-- ⚠️ **AI - Dự báo rời bỏ (Churn Prediction)**: Nhận diện sớm các khách hàng có nguy cơ ngừng sử dụng dịch vụ để kịp thời đưa ra chiến dịch giữ chân.
-- 💎 **Hệ thống phân quyền (RBAC)**: Quản lý đa người dùng với các cấp độ truy cập bảo mật.
-- 📊 **Dashboard Premium**: Giao diện quản trị hiện đại, trực quan với các biểu đồ phân tích Real-time.
-- 🔐 **Bảo mật tối cao**: Xác thực API bằng công nghệ JWT (JSON Web Tokens).
-- 📱 **Giao diện hiện đại**: Thiết kế Glassmorphism & Brutalist tối giản, mượt mà với React, Tailwind CSS và Framer Motion.
+-  **Quản lý khách hàng tập trung**: Theo dõi hồ sơ, lịch sử giao dịch và hành vi của từng khách hàng.
+-  **AI - Phân nhóm khách hàng (Segmentation)**: Tự động phân loại khách hàng (VIP, Loyal, At Risk, Hibernating) bằng thuật toán **K-Means clustering** (scikit-learn).
+-  **AI - Dự báo doanh thu (Forecasting)**: Sử dụng mô hình **Linear Regression** để dự đoán xu hướng doanh thu trong tương lai dựa trên dữ liệu lịch sử.
+-  **AI - Dự báo rời bỏ (Churn Prediction)**: Nhận diện sớm các khách hàng có nguy cơ ngừng sử dụng dịch vụ để kịp thời đưa ra chiến dịch giữ chân.
+-  **Hệ thống phân quyền (RBAC)**: Quản lý đa người dùng với các cấp độ truy cập bảo mật.
+-  **Dashboard Premium**: Giao diện quản trị hiện đại, trực quan với các biểu đồ phân tích Real-time.
+-  **Bảo mật tối cao**: Xác thực API bằng công nghệ JWT (JSON Web Tokens).
+-  **Giao diện hiện đại**: Thiết kế Glassmorphism & Brutalist tối giản, mượt mà với React, Tailwind CSS và Framer Motion.
 
 ---
 
@@ -21,21 +21,21 @@
 
 ### Backend
 - **Python 3.11+ / Django 5**
-- **Django Rest Framework (DRF)**: Xây dựng RESTful API chuyên nghiệp.
-- **SimpleJWT**: Bảo mật phiên làm việc.
-- **SQLite / PostgreSQL**: Lưu trữ dữ liệu linh hoạt.
-- **Pandas & Scikit-learn**: Trái tim của các dịch vụ phân tích AI & Machine Learning.
+- **Django Rest Framework (DRF)**: 
+- **SimpleJWT**: 
+- **SQLite / PostgreSQL**: 
+- **Pandas & Scikit-learn**: 
 
 ### Frontend
-- **React 18** với **TypeScript**: Đảm bảo code sạch và dễ bảo trì.
-- **Vite**: Công cụ build siêu tốc.
-- **Tailwind CSS**: Styling hiện đại và linh hoạt.
-- **Framer Motion**: Tạo các hiệu ứng chuyển động mượt mà.
-- **Lucide React**: Hệ thống Icon phong phú.
+- **React 18** với **TypeScript**: 
+- **Vite**:
+- **Tailwind CSS**: 
+- **Framer Motion**: 
+- **Lucide React**: 
 
 ---
 
-## 🚀 Cài đặt và chạy
+##  Cài đặt và chạy
 
 ### Yêu cầu hệ thống
 
@@ -82,7 +82,7 @@ npm run dev
 
 ---
 
-## 📊 API Endpoints (Core)
+## API Endpoints (Core)
 
 | Method | Endpoint | Mô tả |
 | :--- | :--- | :--- |
@@ -95,16 +95,15 @@ npm run dev
 
 ---
 
-## 🔐 Bảo mật & Quyền truy cập
+##  Bảo mật & Quyền truy cập
 
 - **Authentication**: Giao tiếp bảo mật với JWT. Header yêu cầu: `Authorization: Bearer <access_token>`.
 - **Authorization**: Phân quyền nghiêm ngặt dựa trên vai trò (Admin/Staff/User), đảm bảo an toàn dữ liệu khách hàng.
 
-## 🤝 Đóng góp
+##  Đóng góp
 
 - Tuân thủ chuẩn **PEP 8** cho Backend (Python).
 - Sử dụng **TypeScript Strict Mode** cho Frontend.
 - Đảm bảo UI/UX đồng nhất với ngôn ngữ thiết kế chung của hệ thống.
 
 ---
-*© 2024 AI CRM Analytics System. Mang công nghệ AI vào quản trị doanh nghiệp.*
