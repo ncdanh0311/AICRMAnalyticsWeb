@@ -20,9 +20,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
+    'django_filters',
 
     # Local apps
-    'api',
+    'apps.authentication',
+    'apps.customers',
+    'apps.analytics',
+    'apps.ai_engine',
 ]
 
 MIDDLEWARE = [
@@ -37,7 +41,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
-AUTH_USER_MODEL = 'api.User'
+AUTH_USER_MODEL = 'authentication.User'
 
 TEMPLATES = [
     {

@@ -1,19 +1,17 @@
-#  AI CRM Analytics System
+# AI Customer Behavior Analytics System
 
 ## Giới thiệu
 
-**AI CRM Analytics System** là một hệ thống quản lý quan hệ khách hàng (CRM) thế hệ mới, tích hợp trí tuệ nhân tạo (AI) để phân tích dữ liệu chuyên sâu. Hệ thống không chỉ giúp quản lý thông tin khách hàng và dịch vụ mà còn cung cấp các dự báo thông minh, giúp doanh nghiệp thấu hiểu hành vi khách hàng và tối ưu hóa chiến lược kinh doanh.
+**AI Customer Behavior Analytics System** là một hệ thống phân tích hành vi khách hàng chuyên sâu, tích hợp trí tuệ nhân tạo (AI) để cung cấp các thông tin chi tiết về kinh doanh. Hệ thống được thiết kế theo phong cách Light Mode hiện đại, sạch sẽ, tập trung vào việc quản lý khách hàng và phân tích dữ liệu thay vì các tính năng thương mại điện tử thông thường.
 
-###  Tính năng chính
+### 🌟 Tính năng chính
 
--  **Quản lý khách hàng tập trung**: Theo dõi hồ sơ, lịch sử giao dịch và hành vi của từng khách hàng.
--  **AI - Phân nhóm khách hàng (Segmentation)**: Tự động phân loại khách hàng (VIP, Loyal, At Risk, Hibernating) bằng thuật toán **K-Means clustering** (scikit-learn).
--  **AI - Dự báo doanh thu (Forecasting)**: Sử dụng mô hình **Linear Regression** để dự đoán xu hướng doanh thu trong tương lai dựa trên dữ liệu lịch sử.
--  **AI - Dự báo rời bỏ (Churn Prediction)**: Nhận diện sớm các khách hàng có nguy cơ ngừng sử dụng dịch vụ để kịp thời đưa ra chiến dịch giữ chân.
--  **Hệ thống phân quyền (RBAC)**: Quản lý đa người dùng với các cấp độ truy cập bảo mật.
--  **Dashboard Premium**: Giao diện quản trị hiện đại, trực quan với các biểu đồ phân tích Real-time.
--  **Bảo mật tối cao**: Xác thực API bằng công nghệ JWT (JSON Web Tokens).
--  **Giao diện hiện đại**: Thiết kế Glassmorphism & Brutalist tối giản, mượt mà với React, Tailwind CSS và Framer Motion.
+-  **Professional Analytics Dashboard**: Giao diện quản trị hiện đại với các biểu đồ trực quan từ **ApexCharts**.
+-  **AI - Customer Segmentation**: Tự động phân loại khách hàng (VIP, Regular, Low-value) bằng thuật toán **K-Means clustering**.
+-  **AI - Churn Prediction**: Nhận diện sớm các khách hàng có nguy cơ rời bỏ bằng mô hình **RandomForestClassifier**.
+-  **AI - Vietnamese Sentiment Analysis**: Phân tích cảm xúc phản hồi của khách hàng (Tích cực, Trung lập, Tiêu cực) sử dụng thư viện **Underthesea**.
+-  **Customer Management**: Quản lý danh sách khách hàng tập trung với khả năng lọc và tìm kiếm thông minh.
+-  **Modern Light UI**: Thiết kế tinh tế, minimal, sử dụng **TailwindCSS** và **Lucide Icons**.
 
 ---
 
@@ -21,89 +19,59 @@
 
 ### Backend
 - **Python 3.11+ / Django 5**
-- **Django Rest Framework (DRF)**: 
-- **SimpleJWT**: 
-- **SQLite / PostgreSQL**: 
-- **Pandas & Scikit-learn**: 
+- **Django Rest Framework (DRF)** & **SimpleJWT**
+- **Pandas & Scikit-learn**: Cho các tính năng Machine Learning.
+- **Underthesea**: Xử lý ngôn ngữ tự nhiên (NLP) cho tiếng Việt.
 
 ### Frontend
-- **React 18** với **TypeScript**: 
-- **Vite**:
-- **Tailwind CSS**: 
-- **Framer Motion**: 
-- **Lucide React**: 
+- **React 18** với **TypeScript**
+- **Vite**: Build tool siêu nhanh.
+- **Tailwind CSS**: Framework CSS tiện lợi.
+- **ApexCharts**: Thư viện biểu đồ mạnh mẽ.
+- **Lucide React**: Bộ icon tinh tế.
 
 ---
 
-##  Cài đặt và chạy
+## 🚀 Cài đặt và chạy
 
-### Yêu cầu hệ thống
-
-- **Python** >= 3.10
-- **Node.js** >= 18.0.0
-- **npm** >= 9.0.0
-
-### 1. Cài đặt Backend
-
+### 1. Backend
 ```bash
 cd backend
-
-# Tạo và kích hoạt virtual environment
-python -m venv venv
-source venv/bin/activate  # Trên Windows: venv\Scripts\activate
-
-# Cài đặt các thư viện cần thiết
+# Cài đặt thư viện
 pip install -r requirements.txt
-
-# Cập nhật cấu trúc Database (Quan trọng)
+# Chạy migrations
 python manage.py makemigrations
 python manage.py migrate
-
-# Tạo tài khoản quản trị
-python manage.py createsuperuser
-
-# Khởi động Backend Server
+# Seed dữ liệu mẫu (Quan trọng)
+python seed_ai_crm.py
+# Chạy server
 python manage.py runserver
 ```
-*Backend API sẽ chạy tại: `http://127.0.0.1:8000/`*
 
-### 2. Cài đặt Frontend
-
+### 2. Frontend
 ```bash
 cd frontend
-
 # Cài đặt dependencies
 npm install
-
-# Khởi động Development Server
+# Chạy development server
 npm run dev
 ```
-*Giao diện frontend sẽ chạy tại: `http://localhost:5173/`*
 
 ---
 
-## API Endpoints (Core)
+## 🔑 Tài khoản đăng nhập mẫu
+- **Email**: `admin@example.com`
+- **Password**: `admin123`
+
+---
+
+## 📊 API Endpoints
 
 | Method | Endpoint | Mô tả |
 | :--- | :--- | :--- |
-| **POST** | `/auth/login/` | Đăng nhập và lấy JWT Token |
-| **GET** | `/customers/` | Danh sách khách hàng (Hỗ trợ lọc & tìm kiếm) |
-| **GET** | `/customers/{id}/` | Chi tiết và lịch sử một khách hàng |
-| **GET** | `/ai/insights/` | Lấy dữ liệu phân tích AI (Segmentation, Churn, Forecast) |
-| **GET** | `/admin/stats/` | Thống kê tổng quan hệ thống cho Admin |
-| **GET** | `/products/` | Danh sách các gói giải pháp/dịch vụ |
-
----
-
-##  Bảo mật & Quyền truy cập
-
-- **Authentication**: Giao tiếp bảo mật với JWT. Header yêu cầu: `Authorization: Bearer <access_token>`.
-- **Authorization**: Phân quyền nghiêm ngặt dựa trên vai trò (Admin/Staff/User), đảm bảo an toàn dữ liệu khách hàng.
-
-##  Đóng góp
-
-- Tuân thủ chuẩn **PEP 8** cho Backend (Python).
-- Sử dụng **TypeScript Strict Mode** cho Frontend.
-- Đảm bảo UI/UX đồng nhất với ngôn ngữ thiết kế chung của hệ thống.
-
----
+| **POST** | `/api/auth/login/` | Đăng nhập và nhận JWT Token |
+| **GET** | `/api/customers/` | Danh sách khách hàng (Lọc & Tìm kiếm) |
+| **GET** | `/api/analytics/dashboard/` | Dữ liệu thống kê tổng quan |
+| **POST** | `/api/ai/segmentation/` | Chạy thuật toán phân nhóm khách hàng |
+| **POST** | `/api/ai/churn/` | Chạy dự báo rời bỏ |
+| **POST** | `/api/ai/sentiment/` | Phân tích cảm xúc phản hồi |
